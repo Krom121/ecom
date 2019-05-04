@@ -3,10 +3,12 @@ from .models import Post
 
 
 def post_list(request):
-    posts = Post.published.all()
-    return render(request, 'blog/post/list.html', {'posts': posts})
+    posts = Post.objects.all()
+    return render(request,
+                  'list.html',
+                  {'posts': posts})
 
 
 def post_detail(request, year, month, day, post):
     post = get_object_or_404(Post, slug=post, status='published', publish_year=year, publish_month=month, publishe_day=day)
-    return render(request, 'blog/post/detail.html')
+    return render(request, 'detail.html')

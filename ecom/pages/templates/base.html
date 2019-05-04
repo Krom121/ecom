@@ -19,15 +19,16 @@
         <div class="navbar__background"></div>
         <nav class="navbar__nav">
             <ul class="navbar__list">
-                <li class="navbar__item"><a href="#" class="navbar__link">Home</a></li>
-                <li class="navbar__item"><a href="#" class="navbar__link">Blog</a></li>
-                <li class="navbar__item"><a href="#" class="navbar__link">Our Work</a></li>
+                <li class="navbar__item"><a href="{% url 'home' %}" class="navbar__link">Home</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link"></a></li>
+                <li class="navbar__item"><a href="{% url 'list' %}" class="navbar__link">Blog</a></li>
                 <li class="navbar__item"><a href="#" class="navbar__link">Contact</a></li>
                 <li class="navbar__item"><a href="#" class="navbar__link">T's &amp; C's</a></li>
                 <li class="navbar__item"><a href="#" class="navbar__link">Privacy Policy</a></li>
             </ul>
         </nav>
 </div>
+{% block header %}
 <header class="header">
     <div class="text-box">
     <h1 class="heading-primary">
@@ -45,6 +46,7 @@
     </div>
     {% endif %}
 </header>
+{% endblock %}
 <main>
 {% block content %}
 {% endblock %}

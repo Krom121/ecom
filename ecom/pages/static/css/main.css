@@ -289,4 +289,17 @@ body {
         width: 100%;
         text-align: center; } }
 
+.blog_list {
+  text-align: center;
+  padding: 5rem;
+  margin: 2rem auto; }
+  .blog_list__heading {
+    font-size: 4rem;
+    padding: 1rem;
+    margin: 1rem; }
+
+.date {
+  font-size: 2rem;
+  padding: 1rem; }
+
 /*# sourceMappingURL=main.css.map */

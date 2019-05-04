@@ -28,6 +28,7 @@
     {{ post.body|truncatewords:30|linebreaksbr }}
 
   {% endfor %}
+  {% include "pagination.html" with page=page_obj %}
 </div>
 </section>
 {% endblock %}

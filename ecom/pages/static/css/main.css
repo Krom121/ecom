@@ -329,4 +329,21 @@ body {
   width: 100%;
   border-radius: 3px; }
 
+.pagination {
+  font-size: 2rem;
+  margin: 1rem;
+  padding: 1rem; }
+
+.step-links {
+  font-size: 2rem;
+  color: green;
+  margin: 1rem;
+  padding: 1rem; }
+
+.current {
+  font-size: 2rem;
+  color: red;
+  margin: 1rem;
+  padding: 1rem; }
+
 /*# sourceMappingURL=main.css.map */

@@ -7,3 +7,21 @@
     background-position: bottom;
     position: relative;
 }
+
+.blog-list-header{
+    height: 50vh;
+    background-image: linear-gradient(to bottom,
+    rgba($color-primary-light, 1), 
+    rgba($color-primary-dark, 0.9));
+    background-size: cover;
+    position: relative;
+}
+
+.blog-detail-header{
+    height: 50vh;
+    background-image: linear-gradient(to bottom,
+    rgba($color-primary-light, 1), 
+    rgba($color-primary-dark, 0.9));
+    background-size: cover;
+    position: relative;
+}

@@ -10,7 +10,26 @@
     }
 }
 
+.blog_list__img{
+    width: 60%;
+    margin-top: 3rem;
+    border-radius: 3px;
+
+}
+
 .date{
     font-size: 2rem;
     padding: 1rem;
+    margin: 1rem;
+}
+
+.blog-detail{
+    text-align: center;
+    padding: 5rem;
+    margin: 2rem auto;
+}
+
+.post-detail-img{
+    width: 100%;
+    border-radius: 3px;
 }

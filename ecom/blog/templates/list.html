@@ -1,20 +1,26 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block header %}
-<header class="header">
-
+<header class="blog-list-header">
+  <div class="text-box">
+    <h1 class="heading-primary">
+        <span class="heading-primary--main">Mouse matts</span>
+        <span class="heading-primary--sub">Construction</span>
+    </h1>
+    </div>
 </header>
 {% endblock %}
 {% block content %}
 <section class="blog_list">
     <div class="row">
 {% for post in posts %}
+
     <h2 class="blog_list__heading">
       <a href="{{ post.get_absolute_url }}">
         {{ post.title }}
       </a>
     </h2>
-
+    <img src="{{ post.image.url }}" alt="" class="blog_list__img">
     <p class="date">
       Published {{ post.publish }} by {{ post.author }}
     </p>

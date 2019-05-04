@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header %}
+
+{% endblock %}
+{% block content %}
+<section class="blog-detail"> 
+    <div class="row">
+            <img class="post-detail-img" src="{{ post.image.url }}" class="logo" alt="Eagle Designs logo">
+        <h2 class="blog_list__heading">{{ post.title }}</h2>
+        <p class="date">
+          Published {{ post.publish }} by {{ post.author }}
+        </p>
+        {{ post.body|linebreaks }}
+    </div>
+</section>
+{% endblock %}

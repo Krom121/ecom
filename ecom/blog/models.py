@@ -23,7 +23,7 @@ class Post(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     update = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft')
-
+    image = models.ImageField(upload_to='media/%Y/%m/%d', blank=True)
 
     def get_absolute_url(self):
         return reverse('blog:post_detail', args=[self.publish.year, 

@@ -247,6 +247,18 @@ body {
   background-position: bottom;
   position: relative; }
 
+.blog-list-header {
+  height: 50vh;
+  background-image: linear-gradient(to bottom, lightslategray, rgba(47, 79, 79, 0.9));
+  background-size: cover;
+  position: relative; }
+
+.blog-detail-header {
+  height: 50vh;
+  background-image: linear-gradient(to bottom, lightslategray, rgba(47, 79, 79, 0.9));
+  background-size: cover;
+  position: relative; }
+
 .footer {
   background-color: #344;
   padding: 10rem 0;
@@ -298,8 +310,23 @@ body {
     padding: 1rem;
     margin: 1rem; }
 
+.blog_list__img {
+  width: 60%;
+  margin-top: 3rem;
+  border-radius: 3px; }
+
 .date {
   font-size: 2rem;
-  padding: 1rem; }
+  padding: 1rem;
+  margin: 1rem; }
+
+.blog-detail {
+  text-align: center;
+  padding: 5rem;
+  margin: 2rem auto; }
+
+.post-detail-img {
+  width: 100%;
+  border-radius: 3px; }
 
 /*# sourceMappingURL=main.css.map */

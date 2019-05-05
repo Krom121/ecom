@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, reverse
+from django.http import HttpResponseRedirect
+from django.contrib import messages
+from .forms import SnippetForm
 
 
 def index(request):
@@ -6,7 +9,14 @@ def index(request):
 
 
 def contact(request):
-    return render(request, 'contact.html', {})
+    if request.method == 'POST':
+        form = SnippetForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Thank you We will be in contact soon')
+        return HttpResponseRedirect(reverse('home'))    
+    form = SnippetForm()
+    return render(request, "contact.html", {'form':form}, {'title': 'Contact'})
 
 def list(request):
         return render(request, "list.html", {'title': 'blog'})

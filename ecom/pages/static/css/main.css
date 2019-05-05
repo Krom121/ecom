@@ -86,6 +86,15 @@ body {
   padding: 1rem;
   margin: 2rem; }
 
+.form-contact {
+  width: 100%;
+  display: block;
+  padding: 2rem;
+  position: absolute;
+  top: 60%;
+  left: 70%;
+  transform: translate(-50%, -50%); }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -343,6 +352,12 @@ body {
         width: 100%;
         text-align: center; } }
 
+.contact {
+  height: 95vh;
+  padding: 0 20rem;
+  background-image: linear-gradient(to bottom, lightslategray, rgba(47, 79, 79, 0.9));
+  position: relative; }
+
 .blog_list {
   text-align: center;
   padding: 5rem;
@@ -419,8 +434,10 @@ body {
 .cates {
   text-align: center; }
 
+.product-list-img {
+  width: 100; }
+
 .item {
-  width: 55%;
   margin: 2rem; }
 
 /*# sourceMappingURL=main.css.map */

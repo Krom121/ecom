@@ -32,6 +32,7 @@
 .post-detail-img{
     width: 100%;
     border-radius: 3px;
+    margin-top: -5rem;
 }
 
 .pagination{
@@ -53,4 +54,28 @@
     color: red;
     margin: 1rem;
     padding: 1rem;
+}
+
+.comment{
+   font-size: 2rem;
+   padding: 1rem;
+   margin: 1rem; 
+}
+
+.info{
+    font-size: 2rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.messages{
+    width: 80%;
+    font-size: 3rem;
+    color: $primary-font-color;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #4f2;
+    padding: 2rem;
+    margin: 0 auto;
 }

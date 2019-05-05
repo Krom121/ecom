@@ -1,9 +1,19 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 {% block header %}
 
 {% endblock %}
 {% block content %}
+{% if messages %}
+<div class="messages">
+<ul>
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+</div>
+{% endif %}
 <section class="blog-detail"> 
     <div class="row">
             <img class="post-detail-img" src="{{ post.image.url }}" class="logo" alt="Eagle Designs logo">
@@ -35,11 +45,11 @@
 {% if new_comment %}
   <h2>Your comment has been added.</h2>
 {% else %}
-  <h2>Add a new comment</h2>
+  <h2 class="comment_heading">Add a new comment</h2>
   <form action="." method="post">
     {{ comment_form.as_p }}
     {% csrf_token %}
-    <p><input type="submit" value="Add comment"></p>
+    <p><input class="btn btn--green" type="submit" value="Add comment"></p>
   </form>
 {% endif %}
 

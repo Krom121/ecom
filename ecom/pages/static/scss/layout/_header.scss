@@ -25,3 +25,11 @@
     background-size: cover;
     
 }
+
+.product-list-header{
+    height: 20vh;
+    background-image: linear-gradient(to bottom,
+    rgba($color-primary-light, 1), 
+    rgba($color-primary-dark, 0.9));
+    background-size: cover;
+}

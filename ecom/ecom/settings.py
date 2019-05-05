@@ -44,8 +44,9 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'blog.apps.BlogConfig',
     'pages.apps.PagesConfig',
+    'shop.apps.ShopConfig',
     'crispy_forms',
-]
+] 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

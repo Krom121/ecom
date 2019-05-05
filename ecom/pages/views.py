@@ -10,3 +10,6 @@ def contact(request):
 
 def list(request):
         return render(request, "list.html", {'title': 'blog'})
+
+def product_list(request):
+        return render(request, "shop/product/list.html", {'title': 'blog'})

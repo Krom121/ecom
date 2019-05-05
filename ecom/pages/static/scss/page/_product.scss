@@ -1,0 +1,15 @@
+.product-list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: (5rem, auto);
+    text-align: center;
+}
+
+.cates{
+    text-align: center;
+}
+
+.item{
+    width: 55%;
+    margin: 2rem;
+}

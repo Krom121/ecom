@@ -20,11 +20,19 @@
 
 
 .product-detail-page{
-    padding: 20rem 0;
+    padding: 10rem 0;
     margin: 0 auto;
 }
 
 .product-detail-img{
-    width: 100%;
+    width: 80%;
     border-radius: 3px;
+}
+
+.product-text{
+    font-size: 1.8rem;
+}
+
+.add-to-cart-form input{
+    margin: 0 auto;
 }

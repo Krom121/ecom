@@ -86,6 +86,38 @@ body {
   padding: 1rem;
   margin: 2rem; }
 
+.product-heading {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #344;
+  text-transform: uppercase;
+  padding: 1rem;
+  margin: 2rem; }
+
+.center-text {
+  text-align: center; }
+
+.margin-bottom-sm {
+  margin-bottom: 2rem; }
+
+.margin-bottom-lg {
+  margin-bottom: 8rem; }
+
+.margin-top-sm {
+  margin-top: 4rem; }
+
+.margin-top-lg {
+  margin-top: 8rem; }
+
+.margin-top-huge {
+  margin-top: 10rem; }
+
+.margin-left-sm {
+  margin-left: 2rem; }
+
+.margin-right-sm {
+  margin-right: 2rem; }
+
 .form-contact {
   width: 100%;
   display: block;
@@ -114,6 +146,18 @@ body {
 .btn--green {
   text-transform: uppercase;
   background-color: green;
+  border: none;
+  border-radius: 10rem;
+  color: white;
+  padding: 1.5rem 3rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  outline: none; }
+.btn--red {
+  text-transform: uppercase;
+  background-color: red;
   border: none;
   border-radius: 10rem;
   color: white;
@@ -441,11 +485,17 @@ body {
   margin: 2rem; }
 
 .product-detail-page {
-  padding: 20rem 0;
+  padding: 10rem 0;
   margin: 0 auto; }
 
 .product-detail-img {
-  width: 100%;
+  width: 80%;
   border-radius: 3px; }
+
+.product-text {
+  font-size: 1.8rem; }
+
+.add-to-cart-form input {
+  margin: 0 auto; }
 
 /*# sourceMappingURL=main.css.map */

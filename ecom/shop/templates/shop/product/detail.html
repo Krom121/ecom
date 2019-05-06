@@ -1,39 +1,50 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}{{ product.name }}{% endblock %}
 {% block header %}
 
 {% endblock %}
 {% block content %}
 <section class="product-detail-page">
-    <div class="cart">
-        {% with total_items=cart|length %}
-            {% if cart|length > 0 %}
-              Your cart: 
-              <a href="{% url 'cart:cart_detail' %}">
-                {{ total_items }} item{{ total_items|pluralize }},
-                ${{ cart.get_total_price }}
-              </a>
-            {% else %}
-              Your cart is empty.
-            {% endif %}
-          {% endwith %}
-        </div>
   <div class="row">
-    <div class="col-1-of-2">
-    <img src="{{ product.image.url }}">
-    </div>
-    <div class="col-1-of-2">
-    <h1>{{ product.name }}</h1>
-    <h2><a href="{{ product.category.get_absolute_url }}"></a></h2>
-    <p class="price">&pound;{{ product.price }}</p>
-    {{ product.description|linebreaks }}
-    <form action="{% url 'cart:cart_add' product.id %}" method="post">
-      {{ cart_product_form }}
-      {% csrf_token %}
-      <input type="submit" value="Add to cart">
-    </form>
-    </div>
+  <div class="col-1-of-2">
+    <!-- getting the product image -->
+      <img class="product-detail-img" src="{{ product.image.url }}">
   </div>
+
+  <div class="col-1-of-2">
+    <h2 class="product-heading center-text">{{ product.name }}</h2>
+
+      <!-- getting the product category with absolute url -->
+
+      <h3 class="product-heading__link center-text margin-bottom-sm"><a href="{{ product.category.get_absolute_url }}">{{ product.category }}</a></h3>
+     <div class="product-text center-text margin-bottom-sm">
+
+      <!-- Product description -->
+
+      {{ product.description|linebreaks }}
+      </div>
+
+            <!-- Product price -->
+
+      <p class="product-price center-text margin-bottom-lg">&pound;{{ product.price }}</p>
+
+
+      <!-- The form below is the add product to cart button users can also 
+            add how many of a item they wish to buy 
+          
+      -->
+      <form class="add-to-cart-form" action="{% url 'cart:cart_add' product.id %}" method="post">
+        <div class="product-quanity">
+        {{ cart_product_form }}
+        </div>
+        {% csrf_token %}
+        <input class="btn btn--red" type="submit" value="Add to cart">
+        <a href="{% url 'shop:product_list' %}" class="btn btn--green">Continue shopping</a>
+      </form>
+      <div class="margin-right-sm">
+     
+      </div>
+    </div>
+</div>
 </section>
 {% endblock %}

@@ -38,4 +38,18 @@
         font-size: 16px;
         outline: none;
     }
+
+    &--red{
+        text-transform: uppercase;
+        background-color: red;
+        border: none;
+        border-radius: 10rem;
+        color: white;
+        padding: 1.5rem 3rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        outline: none;
+    }
 }

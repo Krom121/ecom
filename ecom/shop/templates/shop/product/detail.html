@@ -5,12 +5,35 @@
 
 {% endblock %}
 {% block content %}
-<div class="product-detail">
+<section class="product-detail-page">
+    <div class="cart">
+        {% with total_items=cart|length %}
+            {% if cart|length > 0 %}
+              Your cart: 
+              <a href="{% url 'cart:cart_detail' %}">
+                {{ total_items }} item{{ total_items|pluralize }},
+                ${{ cart.get_total_price }}
+              </a>
+            {% else %}
+              Your cart is empty.
+            {% endif %}
+          {% endwith %}
+        </div>
+  <div class="row">
+    <div class="col-1-of-2">
     <img src="{{ product.image.url }}">
+    </div>
+    <div class="col-1-of-2">
     <h1>{{ product.name }}</h1>
-    <h2><a href="{{ product.category.get_absolute_url }}">{{ 
-    product.category }}</a></h2>
+    <h2><a href="{{ product.category.get_absolute_url }}"></a></h2>
     <p class="price">&pound;{{ product.price }}</p>
     {{ product.description|linebreaks }}
+    <form action="{% url 'cart:cart_add' product.id %}" method="post">
+      {{ cart_product_form }}
+      {% csrf_token %}
+      <input type="submit" value="Add to cart">
+    </form>
+    </div>
   </div>
+</section>
 {% endblock %}

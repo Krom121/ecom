@@ -28,6 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+CART_SESSION_ID = 'cart'
 SITE_ID = 1
 
 
@@ -45,6 +46,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'pages.apps.PagesConfig',
     'shop.apps.ShopConfig',
+    'cart.apps.CartConfig',
     'crispy_forms',
 ] 
 
@@ -71,6 +73,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'cart.context_processors.cart',
             ],
         },
     },

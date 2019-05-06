@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Your shopping cart
+{% endblock %}
+
+{% block content %}
+<div class="jumbotron jumbotron-fluid jumbo_4">
+    <div class="container">
+      <h1 class="sub-heading">Your shopping cart</h1>
+      <p class="sub-heading">{{ product.name }}</p>
+    </div>
+  </div>
+  <div class="table-responsive-md">
+  <table class="table table-sm table-hover">
+    <tbody>
+     
+      {% for item in cart %}
+        {% with product=item.product %}
+          <tr>
+            <th scope="row"></th>
+            <td>
+              <a href="{{ product.get_absolute_url }}">
+                <img class="product-img_detail" src="{{ product.image.url }}">
+              </a>
+            </td>
+            <th scope="row"></th>
+    
+            <td><form action="{% url 'cart:cart_add' product.id %}" method="post">
+                
+              {{ item.update_quantity_form.quantity }}
+                {{ item.update_quantity_form.update }}
+                
+                <input class="btn btn-success btn-lg" type="submit" value="Update">
+                {% csrf_token %}
+              </form></td>
+            <td><a class=" btn btn-danger btn-lg" href="{% url 'cart:cart_remove' product.id %}">Remove</a></td>
+            <td class="num">&pound;{{ item.price }}</td>
+            <td class="num">&pound;{{ item.total_price }}</td>
+         
+        {% endwith %}
+      {% endfor %}
+      <th scope="row"></th>
+      <tr class="total">
+        <td>Total</td>
+        <td colspan="4"></td>
+        <td class="lead mb-0">&pound;{{ cart.get_total_price }}</td>
+
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="text-right">
+    <a href="{% url 'shop:product_list' %}" class="mr-md-5 btn btn-outline-info btn-lg">Continue shopping</a>
+    <a href="{% url 'orders:order_create' %}" class="mr-md-5 btn btn-outline-success btn-lg">
+      Checkout
+    </a>
+  </p>
+{% endblock %}

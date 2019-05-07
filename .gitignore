@@ -4,3 +4,4 @@ migrations
 mat 
 db.sqlite3
 .sass-cache
+.bash_profile
